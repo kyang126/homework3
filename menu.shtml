@@ -18,7 +18,7 @@
 						
 		<div id="content">
 			<div id="page-header"><img class="topImage" src="http://www.naturestable.com/wp-content/header-images/menu-header.jpg" alt="Menu" title="Menu" /></div> <!-- End page-header -->
-			
+			<div class="spaceHolder"></div>
 			<div class="clear"></div> <!-- End clear -->
 		
 			<div id="main-content-menu">

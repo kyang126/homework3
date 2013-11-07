@@ -18,7 +18,7 @@
 						
 		<div id="content">
 			<div id="page-header"><img class="topImage" src="img/makePizza.jpg" width="960" height="273" alt="Making pizza" title="job" /></div> <!-- End page-header -->
-			
+			<div class="spaceHolder"></div>
 			<div class="clear"></div> <!-- End clear -->
 		
 			<div id="main-content-menu">
