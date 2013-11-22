@@ -78,6 +78,10 @@
 									
 			
 			<h2 class = "title3">Order</h2> 
+
+			<form id = "cart-form" action = "http://dawgpizza.com/orders/" method = "POST">
+				<input id = "cart-input" type = "hidden" name = "cart">
+			</form>
            	
 <!-- STAAAAAAAAAAAAAAAAAAAAAAAAAAAAARRRRRRRRRRRRRRRRRT-->
 		<div class="row">
@@ -110,7 +114,7 @@
 	         <div class="col-md-4">
 	         	<h2>Your Cart</h2>
                     <div class="cart-container"></div>
-                    <div class="cart-footer">
+                    <div class="template cart-footer">
                         <div class="row total-row">
                         	<div class = "orderItems">
                     			<p><span class = "itemNames"></span></p>
@@ -136,7 +140,11 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12 button-row">
-                                <button type="button" class="btn btn-primary place-order">Place My Order</button>
+                            	<form id = "cart-form" action = "http://dawgpizza.com/orders/" method = "POST">
+									<input id = "cart-input" type = "hidden" name = "cart">
+									
+	                                <button type="button" class="btn btn-primary place-order">Place My Order</button>
+                                </form>
                             </div>
                         </div>                        
                     </div>

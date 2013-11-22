@@ -21,12 +21,12 @@ function render(entries, template, container) {
                  instance.find('.' + property);
                  if (property == 'prices') {
                         instance.find('.' + property).html(this.prices[0] + '/' + this.prices[1] + '/' + this.prices[2]);
-                        $('#small').attr('data-price', this.prices[0]);
-                        $('#med').attr('data-price', this.prices[1]);          
-                        $('#large1').attr('data-price', this.prices[2]);  
+                        instance.find('#small').attr('data-price', this.prices[0]);
+                        instance.find('#med').attr('data-price', this.prices[1]);          
+                        instance.find('#large1').attr('data-price', this.prices[2]);  
                  } else {
                          instance.find('.' + property).html(this[property]);
-                         $('#small').attr('data-name', this.name);
+                         instance.find('.add-to-cart').attr('data-name', this.name);
                  }
         }
         instance.removeClass('template');

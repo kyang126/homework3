@@ -44,6 +44,17 @@ $(function(){
         //instructions) 
         var idx;
         var totalPrice;
+        var signupForm = $(this);
+        //select a descendant input element with the name "addr-1"
+        var nameInput = signupForm.find('input[name="name"]');
+        var nameValue = nameInput.val();
+        if(nameValue.length > 0){
+            alert('you forgot');
+
+        }else {
+            return false;
+        }
+
         for(idx=0; idx<cart.items.length; idx++) {
             totalPrice += this.cart.items[idx].price; 
         }
@@ -52,6 +63,7 @@ $(function(){
                     return false;
         }
         postCart(cart, $('.cart-form'));
+
     });
     
 
@@ -98,6 +110,7 @@ function renderCart(cart, container) {
     instance.find('.total-price').html(total);
     instance.find('.subtotal-price').html(subtotal);
     instance.find('.tax-price').html(tax);
+    instance.removeClass('template');
     instance.removeClass('cart-footer');
     container.append(instance);
     container.fadeIn(1000);
