@@ -1,4 +1,3 @@
-
 //This function passes the arrays containing the information about pizzas, desserts, and drinks to the render function
 $(function() {
   // Document is ready
@@ -17,15 +16,20 @@ function render(entries, template, container) {
     $.each(entries, function(){
         instance = template.clone();
         for (property in this) {
-        	 instance.find('.' + property);
-        	 if (property == 'prices') {
-        	 	instance.find('.' + property).html(this.prices[0] + '/' + this.prices[1] + '/' + this.prices[2]);        	 	
-        	 } else {
-        	 	instance.find('.' + property).html(this[property]);
-        	 }
+                 instance.find('.' + property);
+                 if (property == 'prices') {
+                        instance.find('.' + property).html(this.prices[0] + '/' + this.prices[1] + '/' + this.prices[2]);
+                        small.value = this.prices[0];
+                        $('#small').attr( 'data-price', small.value );
+                         med.value = this.prices[1]; 
+                         large1.value = this.prices[2];            
+                 } else {
+                         instance.find('.' + property).html(this[property]);
+                 }
         }
         instance.removeClass('template');
         container.append(instance);
         container.fadeIn(1000);
     });
 }
+
