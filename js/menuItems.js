@@ -20,9 +20,11 @@ function render(entries, template, container) {
                  if (property == 'prices') {
                         instance.find('.' + property).html(this.prices[0] + '/' + this.prices[1] + '/' + this.prices[2]);
                         small.value = this.prices[0];
-                        $('#small').attr( 'data-price', small.value );
+                        $('#small').attr('data-price', this.prices[0]);
                          med.value = this.prices[1]; 
+                         $('#med').attr('data-price', this.prices[1]);
                          large1.value = this.prices[2];            
+                         $('#large1').attr('data-price', this.prices[2]);
                  } else {
                          instance.find('.' + property).html(this[property]);
                  }

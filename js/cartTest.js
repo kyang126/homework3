@@ -15,6 +15,7 @@ $(function(){
     //click event handler for all buttons with the
     //style class 'add-to-cart'
     $('.add-to-cart').click(function(){
+
         //use the attributes on the button to construct
         //a new cart item object that we can add to the
         //cart's items array
@@ -22,12 +23,12 @@ $(function(){
             type: this.getAttribute('data-type'),
             name: this.getAttribute('data-name'),
             size: this.getAttribute('data-size'),
-            price: this.value;
+            price: this.getAttribute('data-price')
         };
 
         //push the new item on to the items array
         cart.items.push(newCartItem);
-
+        alert(newCartItem.price);
         //render the cart's contents to the element
         //we're using to contain the cart information
         //note that you would need a <div> or some
@@ -67,26 +68,30 @@ function renderCart(cart, container) {
     var total;
     var subtotal;
     var tax;
-    var clonedTemplate = this.template.clone();
+    var instance;
+    var template = $('.cart-footer');
     //empty the container of whatever is there currently
+    container.hide();
     container.empty();
 
     //for each item in the cart...
     for (idx = 0; idx < cart.items.length; ++idx) {
+        instance = template.clone();
         item = cart.items[idx];
         subtotal += item.price;
         tax += item.price*0.095;
         //TODO: code to render the cart item
-        item.render();
+        instance.find('.cart-items-container').html(item.name);
+         total = subtotal + tax;
+    instance.find('.total-price').html(total);
+    instance.find('.subtotal-price').html(subtotal);
+    instance.find('.tax-price').html(tax);
     } //for each cart item
-    this.container.append(clonedTemplate);
     //TODO: code to render sub-total price of the cart
     //the tax amount (see instructions), 
     //and the grand total
-    total = subtotal + tax;
-    subtotal.render;
-    tax.render;
-    total.render;
+   
+    instance.removeClass('template');
 } //renderCart()
 
 // postCart()
