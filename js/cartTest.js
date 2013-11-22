@@ -37,7 +37,7 @@ $(function(){
     });
 
     $('.place-order').click(function(){
-        
+        alert('hello');
         //TODO: validate the cart to make sure all the required
         //properties have been filled out, and that the 
         //total order is greater than $20 (see homework 
