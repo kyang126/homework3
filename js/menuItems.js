@@ -13,20 +13,20 @@ function render(entries, template, container) {
     container.hide();
     container.empty();
 
+
+
     $.each(entries, function(){
         instance = template.clone();
         for (property in this) {
                  instance.find('.' + property);
                  if (property == 'prices') {
                         instance.find('.' + property).html(this.prices[0] + '/' + this.prices[1] + '/' + this.prices[2]);
-                        small.value = this.prices[0];
-                        $('#small').attr('data-price', this.prices[0]);
-                         med.value = this.prices[1]; 
-                         $('#med').attr('data-price', this.prices[1]);
-                         large1.value = this.prices[2];            
-                         $('#large1').attr('data-price', this.prices[2]);
+                        instance.find('#small').attr('data-price', this.prices[0]);
+                        instance.find('#med').attr('data-price', this.prices[1]);          
+                        instance.find('#large1').attr('data-price', this.prices[2]);  
                  } else {
                          instance.find('.' + property).html(this[property]);
+                         instance.find('.add-to-cart').attr('data-name', this.name);
                  }
         }
         instance.removeClass('template');
@@ -34,4 +34,3 @@ function render(entries, template, container) {
         container.fadeIn(1000);
     });
 }
-
