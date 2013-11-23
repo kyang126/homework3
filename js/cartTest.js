@@ -90,38 +90,14 @@ function renderCart(cart, container) {
 
     //for each item in the cart...
     for (idx = 0; idx < cart.items.length; ++idx) {
-<<<<<<< HEAD
        
-=======
-        instance = template.clone();
-        item = cart.items[idx];
-        subtotal += +item.price;
-        tax += +item.price*0.095;
-        //TODO: code to render the cart item
-        itemName += item.name + "<br>"; 
-        instance.find('.itemNames').html(itemName);
->>>>>>> 0c20a705376829eec59817b6a2a815549441ea95
         
     } //for each cart item
     //TODO: code to render sub-total price of the cart
     //the tax amount (see instructions), 
     //and the grand total
 
-<<<<<<< HEAD
     
-=======
-    total = +subtotal + +tax;
-    total = total.toFixed(2);
-    subtotal = subtotal.toFixed(2);
-    tax = tax.toFixed(2);
-    instance.find('.total-price').html(total);
-    instance.find('.subtotal-price').html(subtotal);
-    instance.find('.tax-price').html(tax);
-    instance.removeClass('template');
-    instance.removeClass('cart-footer');
-    container.append(instance);
-    container.fadeIn(1000);
->>>>>>> 0c20a705376829eec59817b6a2a815549441ea95
     
 } //renderCart()
 
