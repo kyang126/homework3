@@ -26,6 +26,7 @@
         <link rel="pingback" href="http://www.naturestable.com/xmlrpc.php" />
         </head>
 
+<<<<<<< HEAD
         <body>
                 <div id="screen-reader"><a href="#main">skip to navigation</a><br /><a href="#content">skip to content</a></div> <!--End screen-reader-->
         
@@ -83,6 +84,65 @@
                                 <input id = "cart-input" type = "hidden" name = "cart">
                         </form>
                    
+=======
+	<body>
+		<div id="screen-reader"><a href="#main">skip to navigation</a><br /><a href="#content">skip to content</a></div> <!--End screen-reader-->
+	
+	<header>
+		<div id="header-wrap">
+		
+			<h1 id="logo">DawgPizza</h1>
+		
+			<nav class="topNav" id="tertiary">
+				<ul>
+					<!--<li><a href="/contact/subscribe">Subscribe</a></li>-->
+					<li><p>Phone number: 206-555-1212</p></li>
+					<li ><a href="https://twitter.com/dawgpizzasea" class="twitter-follow-button" data-show-count="false">Follow @dawgpizzasea</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+				</ul>
+			</nav>
+		
+			<div id="menu-container">
+				<a href="index.html"><img class = "logoBackground" src="img/logo.png" width="188" height="115" id="menu-cap-top" /></a>
+			    <div id="menu-base">
+			        <div id="menu-base-gradient">
+			            <ul id="menu">
+			            	<li><a href="menu.html" class="here">menu</a>
+			                	<ul class="sub-menu">
+									<li class="page_item page-item-68"><a href="pizzas.html">Pizzas</a></li>
+									<li class="page_item page-item-113"><a href="desserts.html">Desserts</a></li>
+									<li class="page_item page-item-122"><a href="drinks.html">Drinks</a></li>				
+								</ul>
+			                </li>
+			                <li><a href="about.html" >about us</a>
+			                </li>
+			                <li><a href="jobs.html" >jobs</a>
+			                </li>
+			                
+			            </ul> <!-- End menu -->
+			        </div> <!-- End menu-base-gradient -->
+			    </div> <!-- End menu-base -->
+			</div> <!-- End menu-container -->
+		</div> <!-- End header-wrap -->
+	</header>
+	
+	<div id="page-wrap">
+						
+		<div id="content">
+			<div id="page-header"><img src="http://www.naturestable.com/wp-content/header-images/menu-header.jpg" alt="Menu" title="Menu" /></div> <!-- End page-header -->
+			<div class="spaceHolder"></div>
+			<div class="clear"></div> <!-- End clear -->
+		
+			<div id="main-content-menu">
+									
+			
+			<h2 class = "title3">Order</h2> 
+
+			<form id = "cart-form" action = "http://dawgpizza.com/orders/" method = "POST">
+				<input id = "cart-input" type = "hidden" name = "cart">
+			</form>
+           	
+>>>>>>> 0c20a705376829eec59817b6a2a815549441ea95
 <!-- STAAAAAAAAAAAAAAAAAAAAAAAAAAAAARRRRRRRRRRRRRRRRRT-->
                 <div class="row">
                         <div class="col-md-8">
@@ -95,6 +155,7 @@
                     </form>
 
 
+<<<<<<< HEAD
                     <!-- container for the pizza entries -->
                     <h2 class = "title3">Pizzas</h2> 
                     <div class="pizzaMenu"></div>
@@ -120,6 +181,33 @@
                                             <p><span class = "itemNames"></span></p>
                                     </div>
                                 <div class="col-xs-10">
+=======
+	            <!-- container for the pizza entries -->
+	            <h2 class = "title3">Pizzas</h2> 
+	            <div class="pizzaMenu"></div>
+	            <div class="template menuItems">
+	                <div class="details">
+	                    <h3 class="title3"><span class="name"></span></h3>
+	                    <button id="small" class="add-to-cart" type="button" data-type="pizza" data-name="pizzas" data-size="small" data-price="16"></span>Small</button>
+						 <button id= "med" class="add-to-cart" type="button" data-type="pizza" data-name="pizzas" 
+						 data-size="medium" data-price="16">Medium</button>
+						 <button id="large1" class="add-to-cart" type="button" data-type="pizza" data-name="pizzas" 
+						 data-size="large" data-price="16">Large</button>
+	                    <p><span class="description"></p>
+	                    <p class= "price2">$<span class="prices"></span></p>
+	                </div>
+	            </div>
+	        </div> 
+	         <div class="col-md-4">
+	         	<h2>Your Cart</h2>
+                    <div class="cart-container"></div>
+                    <div class="template cart-footer">
+                        <div class="row total-row">
+                        	<div class = "orderItems">
+                    			<p><span class = "itemNames"></span></p>
+                    		</div>
+                        	<div class="col-xs-10">
+>>>>>>> 0c20a705376829eec59817b6a2a815549441ea95
                                 Tax:
                             </div>
                              <div class="col-xs-2">
@@ -140,10 +228,17 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12 button-row">
+<<<<<<< HEAD
                                     <form id = "cart-form" action = "http://dawgpizza.com/orders/" method = "POST">
                                                                         <input id = "cart-input" type = "hidden" name = "cart">
                                                                         
                                         <button type="button" class="btn btn-primary place-order">Place My Order</button>
+=======
+                            	<form id = "cart-form" action = "http://dawgpizza.com/orders/" method = "POST">
+									<input id = "cart-input" type = "hidden" name = "cart">
+									
+	                                <button type="button" class="btn btn-primary place-order">Place My Order</button>
+>>>>>>> 0c20a705376829eec59817b6a2a815549441ea95
                                 </form>
                             </div>
                         </div>                        
